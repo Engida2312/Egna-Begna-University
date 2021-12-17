@@ -1,0 +1,30 @@
+<%- include('includes/admin-header') %>
+
+<body>
+<div class="admin-body ">
+  <div class="title">
+      <!-- <h3>Notice-Board</h3> -->
+      <%- include('includes/flash') %>
+    </div>
+    <div class="student-form">
+        <div class="basic-information">
+            <h3>Notice</h3>
+            <form action="/notice" method="POST" class="basic-info-form">
+               <div>
+                   <!-- <label for="post-body" class="text-muted mb-1"><small>Title</small> -->
+                   <input type="text" name="title" placeholder="" value="<%= notice.title%>">
+                <div class="col-75">
+                   <textarea id="body" name="body" placeholder="Notice-Board for-students" style="height:200px"><%= notice.body%></textarea>
+                 </div>
+
+                <div class="form-btn">
+                    <button type="submit" class="btn submit-btn">Submit</button>
+                    <button type="submit" class="btn cancel-btn">cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

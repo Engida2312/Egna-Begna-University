@@ -1,0 +1,39 @@
+<%- include('includes/admin-header') %>
+
+<body>
+<div class="admin-body ">
+  <div class="title">
+      <!-- <h3>Notice-Board</h3> -->
+      <%- include('includes/flash') %>
+    </div>
+    <% notices.forEach(function(notice) {%>
+    <div class="highlight-information" id="notice-card">
+      <div class="new-admission">
+          <div class="card-header">
+            <h3><%= notice.title%></h3>
+              <p id="close">
+                <a href="/notice/<%=notice._id %>/edit" class="btn border-shadow update">
+                  <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                </a>
+                <a href="/notice/<%= notice._id %>/delete" class="btn border-shadow delete">
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a></p>
+          </div>
+              <div>
+                <td>
+                  
+              </div>
+          <div class="inside-box">
+            <%= notice.body%>
+          </div>
+          <div class="notice-date"><%= notice.createdDate%></div> 
+          <form method="POST" action="home">  
+            <button type="submit" class="button">Submit</button>
+          </form>         
+        </div>
+    </div>
+    <%})%>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,352 @@
+<%- include('includes/user-header') %>
+
+<div id="navbar" class="header-navbar" style="background-color: #ffffff;">
+            
+    <a  class="home-icon" href="/"><i class="fa fa-home"></i></a>
+    <span class="menu-bar" ><i class="fa fa-bars" aria-hidden="true"></i></span>
+    <ul class="nav-items">
+        <li class="item"><a>About us<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li class="dropdown-item"><a href="/whyUs">Why EBU?</a></li>
+                <li class="dropdown-item"><a href="/photoGallery">Gallery</a></li>
+                <li class="dropdown-item"><a href="">News</a></li>
+                <li class="dropdown-item"><a href="">Throwbacks</a></li>
+            
+            </ul>
+        </li>
+        <li class="item"><a>Programmes<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li class="dropdown-item"><a href="/medicine">Medicine</a></li>
+                <li class="dropdown-item"><a href="">Engineering</a></li>
+                <li class="dropdown-item"><a href="">Art</a></li>
+                <li class="dropdown-item"><a href="">Law</a></li>
+                <li class="dropdown-item"><a href="">Applied Science</a></li>
+            </ul>
+        </li>
+        <li class="item"><a>Life at campus<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li class="dropdown-item"><a href="">Campus Facilities</a></li>
+                <li class="dropdown-item"><a href="">Students</a></li>
+                <li class="dropdown-item"><a href="">Music and dance</a></li>
+                <li class="dropdown-item"><a href="">Social</a></li>
+                <li class="dropdown-item"><a href="">Sports</a></li>
+            </ul>
+        </li>
+        <li class="item"><a>Library<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li class="dropdown-item"><a href="">Books</a></li>
+                <li class="dropdown-item"><a href="">E-library</a></li>
+                <li class="dropdown-item"><a href="">Facilities</a></li>
+                <li class="dropdown-item"><a href="">Library club</a></li>
+            </ul>
+        </li>
+        <li class="item"><a>Admission<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown">
+                <li class="dropdown-item"><a>Admissions 2021</a> </li>
+                <li class="dropdown-item"><a href="/register">Apply online</a></li>
+                <li class="dropdown-item"><a>How to apply</a></li>
+                <li class="dropdown-item"><a> Scholarships</a></li>
+                <li class="dropdown-item"><a>Requirements</a></li>
+            </ul>
+        </li>
+    </ul>
+
+</div>
+</header>
+    <%- include('includes/flash') %>
+    
+    <main>
+        <div class="main-header" >
+            <div class="header-1">
+                <h1>Egna Begna University</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ipsa iusto, laborum ut blanditiis, quas nostrum
+                aspernatur nihil laudantium aliquam quaerat, similique eligendi cupiditate commodi.</p> 
+                <a href="/register" class="btn apply-btn">Apply now</a>
+            </div>
+        </div>
+        <div class="main-body">
+           
+                <div class="highlight-informations" id="notice-cards">
+                  <div class="notice-parts">
+                      
+                        <h2>Notice</h2><br>
+                        <h3><strong><%= notices[0].title%></strong></h3>
+                        
+                        
+                      </div>             
+                      <div class="inside-boxs">
+                        
+                        <%= notices[0].body%>
+                        
+                      </div>
+                      <div class="notice-dates"><%= notices[0].createdDate%></div>   
+                
+                </div>
+    
+        
+            <div class="carousel-container">
+
+                <!--image slider start-->
+                <div class="slider">
+                    
+            
+                  <div class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                    
+                    <div class="slide first">
+                        <div class="event-image">
+                            <img src="/image/event-images/event-2.jpg" alt="">
+                        </div>
+                        <div class="event-details ">
+                            <h2><%= events[0].eventName%></h2>
+                            <br>
+                            <%let formattedDate = `${new Date(events[0].eventDate).getDate()}-${new Date(events[0].eventDate).getMonth() + 1}-${new Date(events[0].eventDate).getFullYear()}`;
+                            %>
+                            <h3><%= formattedDate%> - <%= events[0].timing%></h3>
+                            <br>
+                            <h3>Venue: <%= events[0].venue%></h3>
+                            <br>
+                            <p><%= events[0].description%></p>
+                            <br>
+                            <a class="btn learn-more-btn" href="">Learn more</a>
+
+                        </div>
+                         
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="event-image">
+                            <img src="/image/event-images/event-8.jpg" alt="">
+                        </div>
+                        <div class="event-details ">
+                            <h2><%= events[1].eventName%></h2>
+                            <br>
+                            <%let formattedDate1 = `${new Date(events[1].eventDate).getDate()}-${new Date(events[1].eventDate).getMonth() + 1}-${new Date(events[1].eventDate).getFullYear()}`;
+                            %>
+                            <h3><%= formattedDate1%> - <%= events[1].timing%></h3>
+                            <br>
+                            <h3>Venue: <%= events[1].venue%></h3>
+                            <br>
+                            <p><%= events[1].description%></p>
+                            <br>
+                            <a class="btn learn-more-btn" href="">Learn more</a>    
+                        </div>
+                        
+                    </div>
+                    <div class="slide">
+                        <div class="event-image">
+                            <img  src="/image/event-images/event-10.jpg" alt="">
+                        </div>
+                        <div class="event-details ">
+                            <h2><%= events[2].eventName%></h2>
+                            <br>
+                            <%let formattedDate2 = `${new Date(events[2].eventDate).getDate()}-${new Date(events[2].eventDate).getMonth() + 1}-${new Date(events[2].eventDate).getFullYear()}`;
+                            %>
+                            <h3><%= formattedDate2%> - <%= events[2].timing%></h3>
+                            <br>
+                            <h3>Venue: <%= events[2].venue%></h3>
+                            <br>
+                            <p><%= events[2].description%></p>
+                            <br>
+                            <a class="btn learn-more-btn" href="">Learn more</a>    
+                        </div>
+                        
+                    </div>
+                    <div class="slide">
+                        <div class="event-image">
+                            <img src="/image/event-images/event-7.jpg" alt="">
+                        </div>
+                        <div class="event-details ">
+                            <h2><%= events[3].eventName%></h2>
+                            <br>
+                            <%let formattedDate3 = `${new Date(events[3].eventDate).getDate()}-${new Date(events[3].eventDate).getMonth() + 1}-${new Date(events[3].eventDate).getFullYear()}`;
+                            %>
+                            <h3><%= formattedDate3%> - <%= events[3].timing%></h3>
+                            <br>
+                            <h3>Venue: <%= events[3].venue%></h3>
+                            <br>
+                            <p><%= events[3].description%></p>
+                            <br>
+                            <a class="btn learn-more-btn" href="">Learn more</a>    
+                        </div>
+                        
+                    </div>
+                    
+                    <!--slide images end-->
+                    <!--automatic navigation start-->
+                    <div class="navigation-auto">
+                      <div class="auto-btn1"></div>
+                      <div class="auto-btn2"></div>
+                      <div class="auto-btn3"></div>
+                      <div class="auto-btn4"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                  </div>
+                  <!--manual navigation start-->
+                  <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                  </div>
+            
+            
+                  <!--manual navigation end-->
+                </div>
+                <!--image slider end-->
+
+            </div>
+
+            
+            
+            <div class="courses-section">
+                <div class="section-description">
+                    <h2><strong class="or">|</strong> Our Courses</h2>
+                    <br>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, natus alias! Illo.</p>
+                </div>
+                <div class="courses">
+
+                    <% departments.forEach(function(department) { %>
+
+                        <div class="top-report-cards">
+                            
+                            <div>
+
+                                <div class="course"><img class="" src="/uploads/images/<%= department.image %>" alt=""><a href=""><%= department.departmentName%></a></div>
+                            </div>
+                        </div>
+                    <% }) %>
+
+                    <!-- <div class="course"><div class="course1"></div> <a href="">Applied Sciences</a></div>
+                    <div class="course"><div class="course2"></div> <a href="">Computer Sciences</a></div>
+                    <div class="course"><div class="course3"></div> <a href="">Law</a></div>
+                    <div class="course"><div class="course4"></div> <a href="">Medicine</a></div> -->
+                </div>
+                <div class="view-courses">
+                    <a class="btn view-courses-btn" href="/all-courses">View all courses</a>
+                </div>
+               
+            </div>
+            <div class="university-statistics">
+                <div class="statistics-item">
+                    <i class="fa fa-users"></i>
+                    
+                    <h3 class="counter" data-target="<%= student_no + 2000 %>">0</h3>
+                    <h4>Students</h4>
+                </div>
+                <div class="statistics-item">
+                    <i class="fa fa-user"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <h4 >Professors</h4>
+                </div>
+                <div class="statistics-item">
+                    <i class="fa fa-book"></i>
+                    <h3 class="counter" data-target="<%= department_no + 20 %> ">0</h3>
+                    <h4>Courses</h4>
+                </div>
+                <div class="statistics-item">
+                    <i class="fa fa-globe"></i>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <h4>Countries</h4>
+                </div>
+            </div>
+
+            <!-- // no counter animation  -->
+            <script>
+                // Selector
+                const counters = document.querySelectorAll('.counter');
+                    // Main function
+                for(let n of counters) {
+                    const updateCount = () => {
+                        const target = + n.getAttribute('data-target');
+                        const count = + n.innerText;
+                        const speed = 500000; // change animation speed here
+                        const inc = target / speed; 
+                        if(count < target) {
+                        n.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                        } else {
+                        n.innerText = target;
+                        }
+                    }
+                updateCount();
+                };
+            </script>
+            
+
+            <div class="main-content">
+                <h3><strong class="or">|</strong> CAMPUS</h3>
+                <div class="cards">
+                    <div class="card tall-wide one"></div>
+                    <div class="card large1 two"></div>
+                    <div class="card tall-wide three"></div>
+                    <div class="card large2 four"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial -->
+        <h2 class="sectionTitles"><strong class="or">|</strong> Testimonials</h2>
+        <div class="testimonial-container">
+
+            <a class="prev-button" onclick="changeSlide(-1)" >&#10094;</a>
+            <div class="testimonial">
+               <img src="./image/homepage-images/pexels-anastasiya-gepp-1462630.jpg" alt="Student-image">
+               <div class="student-name"><strong class="or2">|</strong> Anastasiya Gepp </div>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem voluptatem error repudiandae maiores eveniet.</p>
+           </div>
+           <div class="testimonial">
+                <img src="./image/homepage-images/pexels-andrea-piacquadio-3762800.jpg" alt="Student-image">
+                <div class="student-name"> <strong class="or2">|</strong> Andrea Piacquadio </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quam, eum qui obcaecati unde maiores laudantium deleniti doloremque adipisci ad!</p>
+            </div>
+            <div class="testimonial">
+                <img src="./image/homepage-images/pexels-helmi-lutvyandi-3978518.jpg" alt="Student-image">
+                <div class="student-name"> <strong class="or2">|</strong> Helmi Lutvyandi </div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis eos earum veniam voluptas beatae aliquid ratione dolores nemo!</p>
+            </div>
+            <div class="testimonial">
+                <img src="./image/homepage-images/pexels-nappy-935948.jpg" alt="Student-image">
+                <div class="student-name"> <strong class="or2">|</strong> Nappy </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias fuga voluptas, obcaecati itaque dicta fugiat asperiores temporibus repudiandae totam expedita! Non atque, voluptates blanditiis quibusdam voluptas dolores facere incidunt veritatis.</p>
+            </div>
+            <a class="next-button" onclick="changeSlide(1)" >&#10095;</a>
+        </div>
+        <!-- Partner section -->
+        <h2 class="sectionTitles"><strong class="or">|</strong> Partners</h2>
+        <br>
+        <div class="partners-container">
+                <div class="partner"><img style="width: 80%;" src="./image/partner-1.jpg" alt=""></div>
+                <div class="partner"><img style="width: 80%;" src="./image/partner-2.jpg" alt=""></div>
+                <div class="partner"><img style="width: 80%;" src="./image/partner-3.jpg" alt=""></div>
+                <div class="partner"><img style="width: 80%;" src="./image/partner-4.jpg" alt=""></div>
+                <div class="partner"><img style="width: 80%;" src="./image/partner-5.jpg" alt=""></div>
+                <div class="partner"><img style="width: 80%;" src="./image/partner-6.jpg" alt=""></div>
+        </div>
+    </main>
+    
+<!-- Footer start -->
+<%- include('includes/footer') %>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+        
+        if(counter > 4){
+            counter = 1;
+        }
+        }, 5000);
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

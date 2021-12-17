@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-us-banner{
+  min-height: 80vh;
+  background-image:linear-gradient(transparent,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/image/homepage-images/about-us-banner.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+.about-us-banner div{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    transform: translate(10%,-80%);
+
+}
+.about-us-banner h3{
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+.about-us-banner p{
+    margin-left: 3px;
+    font-size: 18px;
+    color: white;
+}
+.about-us-banner h3 span{
+    color: #ffd43b;
+}
+
+.about-desc{
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.media_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height:100px;
+    border-radius: 100%;
+    border: 1px solid #ffd43b;
+    margin-right: 8px;
+    flex-basis: 100px;
+}
+
+.media_icon i{
+    font-size: 40px;
+}
+.about-info{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.about-info div{
+    width: 80%;
+}
+
+.about-info h4 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+.gallery{
+
+    /* background-color: #eee; */
+}
+.gallery-header{
+    min-height:10vh;
+    background-color: #9c9fa5;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+.gallery-header h3{
+    font-size: 32px;
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* text-shadow: 5px 5px 5px rgba(255,255,255,0.3); */
+}
+.gallery-content{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 50px;
+    margin-bottom: 3rem;
+
+}
+.gallery-content img{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    object-position: top;
+    transition: all 0.4s ease-in-out;
+
+}
+.gallery-content img:hover{
+    transform: scale(1.5) ;
+}
+
+.img-card{
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/****** course - medicine page *****/
+
+.medicine-banner{
+    min-height: 80vh;
+    background-image:linear-gradient(transparent,rgba(0,0,0,0.5),rgba(0,0,0,0.9)),url('/image/medicine/laboratory2.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.medicine-banner h3{
+   
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    font-size: 36px;
+    color: white;
+    margin-bottom: 10px;
+}
+.medicine-banner p{
+    margin-left: 3px;
+    font-size: 18px;
+    color: white;
+}
+
+.medicine-banner div{
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    transform: translate(10%,-80%);
+
+}
+
+.our-goals-img-medicine img{
+
+    width: 400px;
+}
+
+.mission-img-medicine img{
+    width: 400px;
+    margin-left: 5em;
+
+}
+
+@media screen and (max-width:768px) {
+    .medicine-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .medicine-details img{
+        width: 200px;
+    }
+
+    .med2 img{
+        margin-top: 2em;
+        margin-left: 0;
+    } 
+}

@@ -1,0 +1,364 @@
+
+/************* Body --header  */
+.body-header{
+  background-image: url("../image/header\ 2-min.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 120px;
+}
+.student-navbar {
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+.student-home {
+flex: 1;
+}
+
+.student-nav-links {
+padding-left: 2em;
+}
+
+.student-nav-links:hover {
+color: #fff;
+background-color: #193154;
+margin: 0;
+padding-left: 0;
+padding: 1em 1em;
+}
+
+.student-profile {
+height: 50px;
+width: 50px;
+border-radius: 75%;
+border: solid #fff;
+}
+
+.student-top {
+padding-right: 160px;
+}
+.student-icon {
+color: #fff;
+padding-left: 2em;
+}
+
+.student-profile-dropdown {
+padding: 20px;
+}
+#drop {
+padding: 20px;
+}
+
+
+
+/**************** Body - Main part ********************/
+.student-activity-container {
+display: flex;
+justify-content: center;
+/* justify-content: space-around; */
+/* margin: 5% auto 5% 10%; */
+/* width: 100%; */
+
+background-blend-mode: lighten;
+/* padding: 2em; */
+/* gap: 5em; */
+
+/* border-radius: 3px 2px; */
+}
+
+.student-activity-container table, .attendance table {
+width: 90%;
+/* margin: 30px; */
+/* gap:5em;
+ */
+ margin:30px;
+}
+
+.tasks{
+display:left;
+/* margin: 30px; */
+  /* width: 600px; */
+  box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253);
+  border-radius: 0.5em;
+}
+
+.tasks h3{
+text-align: center;
+}
+
+.tasks td {
+border: 1px solid #EAEAEA;
+text-align: left;
+padding: 18px;
+margin:20px;
+}
+.th,tr{
+border: 1px solid #EAEAEA;
+width: auto;
+max-width: 100%;
+text-align: left;
+}
+
+.tasks th{
+background-color: #009DAE;
+color: #fff;
+font-size: larger;
+}
+
+.tasks tr:nth-child(odd) {
+/* color: #EAEAEA; */
+background-color: #fff;
+}
+
+.tasks tr:nth-child(even) {
+/* color: #EAEAEA; */
+background-color: #fff;
+}
+
+.tasks table{
+/* margin: 20px; */
+text-align: center;
+}
+.attendance{
+display: grid;
+}
+.attendance table{
+/* width: 100%; */
+
+box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253); 
+}
+
+.attendance h3{
+
+text-align: center;
+font-size: x-large;
+}
+
+.attendance tr:nth-child(odd) {
+color: #EAEAEA;
+background-color: #009DAE;
+}
+
+.attendance p{
+padding:1em;
+font-size: 100px;
+text-align: center;
+
+}
+
+@media(max-width: 768px) {
+.student-activity-container {
+  flex-direction: column;
+}
+.attendance{
+  /* padding: 4em; */
+  grid-template-columns: repeat(1,1fr);
+  /* grid-template-rows: repeat(2,1fr); */
+}
+
+}
+.result-container {
+  margin-left: 4em;
+  padding-bottom: 2em;
+  width:auto;
+  max-width:100%;
+  /* box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253);  */
+}
+
+
+
+.task-attendance-division{
+margin: 5em 0;
+}
+
+.timetable {
+text-align: center;
+padding: 1em;
+width:auto;
+max-width: 100%;
+margin: 5px;
+background-color: wheat;
+}
+
+.timetable h3 {
+color: #fff;
+font-size: x-large;
+}
+
+.timetable p {
+padding: 1em;
+text-align: justify;
+}
+
+@media(max-width: 768px) {
+ .timetable{
+   overflow: scroll;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(2,1fr);
+}
+}
+/************ Student-page Attendance percentage *******************/
+
+
+/* ************ Event */
+
+.event-container{
+display: flex;
+justify-content: space-around;
+margin: 3em;
+flex-direction: column;
+align-items: center;
+}
+
+.event-table{
+display: flex;
+max-width: 850px;
+justify-content: center;
+margin: 3em;
+}
+
+.event-image{
+height: 300px;
+width: 400px;
+}
+.event-table td{
+padding: 0.5em;
+}
+
+.events{
+display: grid;
+grid-template-columns: auto;
+justify-items: left;
+}
+
+.third-division{
+margin: 0 0 6em 0;
+display: grid;
+grid-template-rows: repeat(1,1fr);
+grid-template-columns: repeat(2,1fr);
+}
+
+@media(max-width: 768px) {
+.third-division{
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(1,1fr);
+}
+}
+
+table {
+font-family: arial, sans-serif;
+/* border-collapse: collapse; */
+width: 100%;
+/* overflow: scroll; */
+}
+td,
+th {
+border: 1px solid #dddddd;
+text-align: left;
+
+padding: 5px;
+}
+tr:nth-child(odd) {
+background-color: #EAEAEA;
+}
+
+/******* Footer *********/
+.student-footer {
+display: flex;
+justify-content: center;
+}
+
+
+.time-table-container{
+/* display: grid; */
+/* margin:5; */
+/* padding: 8px; */
+border: transparent solid thin;
+/* border-collapse: separate; */
+/* box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253); */
+border-spacing: 0 0px;
+}
+.time-table-container table{
+box-shadow: 0em 0.3em 0.5em rgba(6, 13, 77, 0.253);
+border-collapse: collapse;
+display: table-cell;
+border-spacing: 0 2px;
+/* margin: 10px; */
+padding: 0.5em 0.5em;
+border-radius: 8px;
+/* vertical-align: inherit; */
+
+/* box-shadow: 1px 1px 4px 2px #7687a1; */
+}
+.time-table-container tr{
+/* background-color: rgb(10, 26, 68); */
+margin: 5px;
+border: none;
+/* color: #ffffff; */
+padding: 10px;
+border-spacing: 0 2px;
+
+
+}
+.time-table-container tr:hover{
+background-color: #f74a4a;
+transform-style: flat;
+}
+.time-table-container td{
+border: none;
+border-spacing: 0 2px;
+margin: 5px;
+padding: 1em 0.5em;
+/* border-radius: 8px; */
+}
+.time-table-container th{
+border: none;
+color: white;
+/* margin: 10px; */
+background-color: #050122;
+padding: 13px 30px;
+/* border-radius: 8px; */
+}
+
+.notice{
+display: grid;
+}
+
+#notices{
+background-color: #f5d108;
+display: grid;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 5em 0em;
+padding: 3em 3em;
+box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253);
+/* flex-direction: column; */
+
+}
+
+.podcast{
+/* box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253); */
+margin: 6em 0;
+/* padding:2em; */
+}
+.arrange-notice-pod{
+box-shadow: 0em 0.3em 0.5em rgba(0, 0, 0, 0.253);
+/* margin: 10px; */
+display: grid;
+/* gap: 3em; */
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(1,1fr);
+}
+@media(max-width: 768px) {
+/* #notice */
+.notice-column, .arrange-notice-pod{
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(1,1fr);
+}
+}
+
+.time-table-container h3{
+  padding: 1em;
+}

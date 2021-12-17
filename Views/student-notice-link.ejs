@@ -1,0 +1,47 @@
+<%- include('includes/user-header') %>
+
+
+<div id="navbar" class="header-navbar">
+            
+    <a  class="home-icon" href="/"><i class="fa fa-home"></i></a>
+    <span class="menu-bar" ><i class="fa fa-bars" aria-hidden="true"></i></span>
+    <ul class="nav-items">
+                <li class="item"><a href="">Exam</a>
+                    
+                </li>
+                <li class="item"><a href="">E-Content</a>
+        
+                </li>
+                <li class="item"><a href="">Fees</a>
+                   
+                </li>
+                <li class="item"><a href="">Library</a>
+            
+                </li>
+                <li class="item"><a href="/student-notice-link">Notice</a></li>
+                    
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <% notices.forEach(function(notice) {%>
+        <div class="highlight-informations" id="notice-cards">
+          <div class="notice-parts">
+              
+                <h2>Notice</h2><br>
+                <h3><strong><%= notice.title%></strong></h3>
+                
+                
+              </div>             
+              <div class="inside-boxs">
+                
+                <%= notice.body%>
+                
+              </div>
+              <div class="notice-dates"><%= notice.createdDate%></div>   
+        
+        </div>
+    <%})%>
+
+<%- include('includes/footer') %>

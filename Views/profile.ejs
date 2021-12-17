@@ -1,0 +1,104 @@
+
+<% if(post.isVisitorOwner){ %>
+  <%- include('includes/admin-header') %>
+<% }else{ %>
+  <%- include('includes/user-header') %>
+<% } %>
+
+
+
+<div class="admin-body">
+  <%- include('includes/flash') %>
+  <div class="profile-container">
+    <!-- profile -->
+    <div class="profileCard">
+      <h1 style="align-items: center; margin: 10px; color:black"><%= post.firstName %> <%= post.lastName %></h1>
+      <div class="imageContainer">
+        <img src="/uploads/images/<%= post.image %>" style="width: 200px">
+      </div>
+      <div class="main-container profile">
+        <div class="basic-profile-info">
+          <p><i class="material-icons">home</i>Egna university</p>
+          <p><i class="material-icons">room</i></i><%= post.username %></p>
+        <p><i class="material-icons">class</i> <%= post.department %></p>
+        <p><i class="material-icons">male</i> <%= post.gender %></p>
+        <p><i class="material-icons">email</i><%= post.email %></p>
+        <p><i class="material-icons">phone</i><%= post.phoneNumber %></p>
+        <p><i class="material-icons">room</i></i><%= post.birthDate %></p>
+        <p><i class="material-icons">room</i></i><%= post.address %></p>
+        </div>
+
+      
+        <h3 >General Report</h3>
+        <p>Digital Electronics</p>
+        <div class="skill-bar">
+          <div class="progress-bar" style="width:80%">80%</div>
+        </div>
+        <p>MAVC</p>
+        <div class="skill-bar">
+          <div class="progress-bar" style="width:60%">60%</div>
+        </div>
+        <p>Programming</p>
+        <div class="skill-bar">
+          <div class="progress-bar" style="width:90%">90%</div>
+        </div>
+        <p>English</p>
+        <div class="skill-bar">
+          <div class="progress-bar" style="width:70%">70%</div>
+        </div>
+        <p>Physics</p>
+        <div class="skill-bar">
+          <div class="progress-bar" style="width:35%">35%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-profile">
+            <!-- chart -->
+      <div id="curve_chart" style="width: 650px; height: 400px;float: right;margin-left: 10px;">chart
+      </div>
+        <!--paragraph about the student-->
+      <div class="textContainer">
+        <p>
+          <%= post.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<% if(!post.isVisitorOwner){ %>
+  <%- include('includes/footer') %>
+<% } %>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Scores'],
+        ['2014', 400],
+        ['2015', 350],
+        ['2016', 380],
+        ['2017', 430]
+      ]);
+
+      var options = {
+        title: 'Progress Report',
+        curveType: 'function',
+        legend: { position: 'bottom' }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

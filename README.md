@@ -1,2 +1,1 @@
-# Egna-Begna-University
- Fullstack project
+We hereby declare that all the images and company logos used in this project are all for non-commercial and practice use only.

@@ -1,0 +1,303 @@
+<%- include('includes/user-header') %>
+
+      <div id="navbar" class="header-navbar">
+            <p class="menu-bar" href="" ><i class="fa fa-bars" aria-hidden="true"></i></p>
+            <a  class="home-icon" href="/"><i class="fa fa-home"></i></a>
+            <ul class="nav-items">
+                <li class="item"><a href="">Exam</a>
+                    
+                </li>
+                <li class="item"><a href="">E-Content</a>
+        
+                </li>
+                <li class="item"><a href="">Fees</a>
+                   
+                </li>
+                <li class="item"><a href="">Library</a>
+            
+                </li>
+                <li class="item"><a href="/student-notice-link">Notice</a></li>
+                    
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <%- include('includes/flash') %>
+
+    <main>
+        <div class="body-header">
+                <h1>Egna Begna University</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+
+       <div class = "arrange-notice-pod">
+
+            <div class="podcast">
+                <img src = "svg/undraw_education_f8ru.svg" width = "80%" height="80%">
+            </div>
+        
+            
+            <div class = "notice-column">
+                <% notices.forEach(function(notice) {%>
+                    <div class="notice" id="notices">
+                    <div class="notice-part-one">
+                        
+                            <h2>Notice</h2><br>
+                            <h3><strong><%= notice.title%></strong></h3>
+                            
+                            
+                        </div>             
+                        <div class="inside-box-one">
+                            
+                            <%= notice.body%>
+                            
+                        </div>
+                        <div class="notice-date-one"><%= notice.createdDate%></div>   
+                    
+                    </div>
+                <%})%>
+            </div>
+       </div>
+        
+
+
+
+        <div class="carousel-container">
+
+            <!--image slider start-->
+            <div class="slider">
+                
+        
+              <div class="slides">
+                <!--radio buttons start-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <!--radio buttons end-->
+                <!--slide images start-->
+                
+                <div class="slide first">
+                    <div class="event-image">
+                        <img src="/image/event-images/event-2.jpg" alt="">
+                    </div>
+                    <div class="event-details ">
+                        <h2><%= events[0].eventName%></h2>
+                        <br>
+                        <%let formattedDate = `${new Date(events[0].eventDate).getDate()}-${new Date(events[0].eventDate).getMonth() + 1}-${new Date(events[0].eventDate).getFullYear()}`;
+                        %>
+                        <h3><%= formattedDate%> - <%= events[0].timing%></h3>
+                        <br>
+                        <h3>Venue: <%= events[0].venue%></h3>
+                        <br>
+                        <p><%= events[0].description%></p>
+                        <br>
+                        <a class="btn learn-more-btn" href="">Learn more</a>
+
+                    </div>
+                     
+                </div>
+                
+                <div class="slide">
+                    <div class="event-image">
+                        <img src="/image/event-images/event-8.jpg" alt="">
+                    </div>
+                    <div class="event-details ">
+                        <h2><%= events[1].eventName%></h2>
+                        <br>
+                        <%let formattedDate1 = `${new Date(events[1].eventDate).getDate()}-${new Date(events[1].eventDate).getMonth() + 1}-${new Date(events[1].eventDate).getFullYear()}`;
+                        %>
+                        <h3><%= formattedDate1%> - <%= events[1].timing%></h3>
+                        <br>
+                        <h3>Venue: <%= events[1].venue%></h3>
+                        <br>
+                        <p><%= events[1].description%></p>
+                        <br>
+                        <a class="btn learn-more-btn" href="">Learn more</a>    
+                    </div>
+                    
+                </div>
+                <div class="slide">
+                    <div class="event-image">
+                        <img  src="/image/event-images/event-10.jpg" alt="">
+                    </div>
+                    <div class="event-details ">
+                        <h2><%= events[2].eventName%></h2>
+                        <br>
+                        <%let formattedDate2 = `${new Date(events[2].eventDate).getDate()}-${new Date(events[2].eventDate).getMonth() + 1}-${new Date(events[2].eventDate).getFullYear()}`;
+                        %>
+                        <h3><%= formattedDate2%> - <%= events[2].timing%></h3>
+                        <br>
+                        <h3>Venue: <%= events[2].venue%></h3>
+                        <br>
+                        <p><%= events[2].description%></p>
+                        <br>
+                        <a class="btn learn-more-btn" href="">Learn more</a>    
+                    </div>
+                    
+                </div>
+                <div class="slide">
+                    <div class="event-image">
+                        <img src="/image/event-images/event-7.jpg" alt="">
+                    </div>
+                    <div class="event-details ">
+                        <h2><%= events[3].eventName%></h2>
+                        <br>
+                        <%let formattedDate3 = `${new Date(events[3].eventDate).getDate()}-${new Date(events[3].eventDate).getMonth() + 1}-${new Date(events[3].eventDate).getFullYear()}`;
+                        %>
+                        <h3><%= formattedDate3%> - <%= events[3].timing%></h3>
+                        <br>
+                        <h3>Venue: <%= events[3].venue%></h3>
+                        <br>
+                        <p><%= events[3].description%></p>
+                        <br>
+                        <a class="btn learn-more-btn" href="">Learn more</a>    
+                    </div>
+                    
+                </div>
+                
+                <!--slide images end-->
+                <!--automatic navigation start-->
+                <div class="navigation-auto">
+                  <!-- <div class="auto-btn1"></div>
+                  <div class="auto-btn2"></div>
+                  <div class="auto-btn3"></div>
+                  <div class="auto-btn4"></div> -->
+                </div>
+                <!--automatic navigation end-->
+              </div>
+              <!--manual navigation start-->
+              <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+              </div>
+        
+        
+              <!--manual navigation end-->
+            </div>
+            <!--image slider end-->
+
+        </div>
+
+            <div class="task-attendance-division">
+                <div class="student-activity-container">
+                    <!-- <div class="student-activity-title">
+                        <h2>| Student Activity</h2>
+                    </div> -->
+                    <div class="task-content">
+                        <table class="tasks">
+                            <th> <h3>Tasks 📝</h3></th>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                            <tr><td><li>1. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</li></td></tr>
+                        </table>
+                    </div>
+                    
+                <div class="attendance">
+                    <table>
+                        <th><h3>Attendance 📋</h3></th>
+                        <tr><td><p>73%</p></td></tr>
+                        
+                    </table>
+                    
+                </div>                   
+                </div>             
+            </div>
+
+          
+ 
+            <div class="third-division">
+
+                <div class="result-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+        
+                <div class="time-table-container">
+                    <table>
+                        <h3>Time Table</h3>
+
+                        <thead>
+                            <th>#</th>
+                            <th>Subject</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Faculty name</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>CS</td>
+                                <td>07:30</td>
+                                <td>08:30</td>
+                                <td>Engida</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>CD</td>
+                                <td>08:30</td>
+                                <td>09:20</td>
+                                <td>Meti</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><b><i>Tea-Break</i></b></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>SE</td>
+                                <td>09:30</td>
+                                <td>10:30</td>
+                                <td>Tedda</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>OS</td>
+                                <td>10:30</td>
+                                <td>11:30</td>
+                                <td>Qolcha</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>COA</td>
+                                <td>11:30</td>
+                                <td>12:30</td>
+                                <td>Naola</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+    <%- include('includes/footer') %>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+        
+        if(counter > 4){
+            counter = 1;
+        }
+        }, 5000);
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/student-page.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

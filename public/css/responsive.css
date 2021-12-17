@@ -1,0 +1,52 @@
+.menu-bar i {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+
+  .logo i,
+  .footer-logo a i {
+    font-size: 25px;
+  }
+  .header-toolbar .login {
+    width: 50px;
+    font-size: 12px;
+    padding: 7px;
+  }
+  .nav-items{
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    
+  }
+
+
+  .nav-items.active{
+    max-height: 100vh;
+    opacity: 1;
+    z-index: 10;
+  }
+
+  
+  .nav-items .item{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+  }
+  .nav-items .item:last-child{
+    border-bottom: none;
+  }
+
+ 
+  .menu-bar i {
+    display: block;
+  }
+  /* .responsive {
+    display: block;
+  } */
+}
+/* ***************************************** */
+

@@ -1,0 +1,46 @@
+<%- include('includes/admin-header') %>
+
+<!-- ***************** add event body ****************-->
+<div class="admin-body">
+    <div class="student-form">
+        
+        <div class="event-container">
+            <div class="event-table">
+                <table>
+                    <th colspan="2">Event Created</th>
+                    <tr>
+                        <td><b>Title:</b> </td>
+                        <td><%= eventData.eventName%></td>
+                    </tr>
+                    <tr>
+                        <td><b>Date: </b></td>
+                        <td><%= eventData.eventDate%></td>
+                    </tr>
+                    <tr>
+                        <td><b>Timing: </b></td>
+                        <td><%= eventData.timing%></td>
+                    </tr>
+                    <tr>
+                        <td><b>Venue: </b></td>
+                        <td><%= eventData.venue%></td>
+                    </tr>
+                    <tr>
+                        <td><b>Details:</b></td>
+                        <td> <%= eventData.description%></td>
+                    </tr>
+                    <tr>
+                        <td><b>Registration:</b></td>
+                        <td><%= eventData.registration%></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- *********************add event body end**************** -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/admin.js"></script>
+</body>
+</html>

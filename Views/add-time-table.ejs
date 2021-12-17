@@ -1,0 +1,104 @@
+<%- include('includes/admin-header') %>
+
+
+    <div class="admin-body">
+        <form class="time-table" action="/add-time-table" method="post">
+            <div class="top">
+                <label for="">Department</label>
+                <select name="department" id="">
+                    <option  value="CE">CE</option>
+                    <option value="ME">ME</option>
+                    <option value="CHE">CHE</option>
+                    <option value="EE">EE</option>
+                </select>
+    
+                <!-- <label for="">class</label>
+                <select name="class" id="">
+                    <option value="TC1">TC1</option>
+                    <option value="TC2">TC2</option>
+                    <option value="TC3">TC3</option>
+          
+                </select> -->
+ 
+                <label for="">Days</label>
+                <select name="day" id="">
+                    <option value="Monday">Monday</option>
+                    <option value="Tusday">Tuesday</option>
+                    <option value="wednsday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select>
+            </div>
+    
+            <div class="bottum">
+                <div class="container">
+                    <table class="MU-table">
+                        <thead>
+                            <tr class="title">
+                                <th>#</th>
+                                <th>Subject</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Faculty Name</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                            <tr class="row1">
+                                <td>1</td>
+                                <td><input name="subject" type="text"></td>
+                                <td><input name="from" type="time"></td>
+                                <td><input name="to" type="time"></td>
+                                <td><input name="fucultyName" type="text"></td>
+                            </tr>
+                            <tr class="row2">
+                                <td>2</td>
+                                <td><input name="2-subject" type="text"></td>
+                                <td><input name="2-from" type="time"></td>
+                                <td><input name="2-to" type="time"></td>
+                                <td><input name="2-fucultyName" type="text"></td>
+                            </tr>
+                            <tr class="row3">
+                                <td>3</td>
+                                <td><input name="3-subject" type="text"></td>
+                                <td><input name="3-from" type="time"></td>
+                                <td><input name="3-to" type="time"></td>
+                                <td><input name="3-fucultyName" type="text"></td>
+                            </tr>
+                            <tr class="row4">
+                                <td>4</td>
+                                <td><input name="4-subject" type="text"></td>
+                                <td><input name="4-from" type="time"></td>
+                                <td><input name="4-to" type="time"></td>
+                                <td><input name="4-fucultyName" type="text"></td>
+                            </tr>
+                            <tr class="row5">
+                                <td>5</td>
+                                <td><input name="5-subject" type="text"></td>
+                                <td><input name="5-from" type="time"></td>
+                                <td><input name="5-to" type="time"></td>
+                                <td><input name="5-fucultyName" type="text"></td>
+                            </tr>
+                            <tr class="row6">
+                                <td>6</td>
+                                <td><input name="6-subject" type="text"></td>
+                                <td><input name="6-from" type="time"></td>
+                                <td><input name="6-to" type="time"></td>
+                                <td><input name="6-fucultyName" type="text"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>   
+            <div class="form-btn">
+                <button type="submit" class="btn submit-btn">Submit</button>
+                <button type="submit" class="btn cancel-btn">cancel</button>
+            </div> 
+        </form>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+ <%- include('includes/admin-header') %>
+
+
+ <!-- *********************admin body start**************** -->
+ <div class="admin-body">
+     <div class="student-form">
+
+        <%- include('includes/flash') %>
+
+         <div class="basic-information">
+            <a id="back-link" href="/profile/<%= post._id %>">&laquo; Back to profile</a>
+
+             <h3>Basic Information</h3>
+            <form action="/student/<%= post._id %>/edit" method="post" class="basic-info-form">
+                 <div>
+                     <input type="text" name="firstName" value="<%= post.firstName %>" placeholder="First Name">
+                     <input type="text" name="lastName" value="<%= post.lastName %>" placeholder="Last Name">
+                 </div>
+                 <div>
+                     <input type="number" maxlength="10" name="phoneNumber" value="<%= post.phoneNumber %>" placeholder="Phone No">
+                     Birth Date<input type="date" name="birthDate" value="<%= post.birthDate %>" placeholder="Date">
+                     <!-- <input type="date" name="age" placeholder="Age"> -->
+                 </div>
+                 <div>
+                     <label>Gender:</label>
+                     <select class="gender" name="gender">
+                         <option value="Male">Male</option>
+                         <option value="Female">Female</option>
+                         <option value="Other">Other</option>
+                     </select>
+                     <input type="text" name="department" value="<%= post.department %>"placeholder="Department">
+                     <input type="text" name="email" value="<%= post.email %>" placeholder="Enter your email">
+                 </div>
+                 <label for="address" class="description">
+                     <textarea name="address" id="iddress" rows="2" placeholder="Address"><%= post.address %></textarea>
+                 </label>
+                 <label for="fileUpload" class="flie-upload-label">
+                     <div>
+                         <i class="fa fa-file-upload"></i>
+                     </div>
+                     <input class="file-upload" type="file" id="fileUpload" name="image" value="<%= post.image %>">
+                     <p><strong>Choose a file</strong> or drag it here</p>
+                     <button class="btn upload-btn" type="submit"">Upload</button>
+                 </label>
+
+                 <label for="description" class="description">
+                     <textarea name="description" id="description" rows="6" placeholder="Description"><%= post.description %></textarea>
+                 </label>
+
+                 <h3>Account Information</h3>
+                <div>
+                    <div>
+                        <input type="text" name="username" value="<%= post.username %>" placeholder="User Name">
+                    </div>
+                    <div>
+                        <input type="password" name="password" value="<%= post.password %>" placeholder="Password">
+                        <!-- <input type="password" name="password" placeholder="Confirm Password"> -->
+                    </div>
+                </div>
+                <div class="form-btn">
+                     <button type="submit" class="btn submit-btn">Save Update</button>
+                     <button type="submit" class="btn cancel-btn">cancel</button>
+                 </div>
+             </form>
+         </div>
+         <div class="account-information">
+             
+         </div>
+     </div>
+ </div>
+ <!-- *********************admin body end**************** -->
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="/js/admin.js"></script>
+</body>
+</html>

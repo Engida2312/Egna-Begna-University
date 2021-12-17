@@ -1,0 +1,173 @@
+body{
+    background-color: #193154;
+    font-family: 'IBM plex Mono', monospace;
+     width: 100%;
+}
+.register-form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+
+}
+
+.register-form .error-display{
+    margin: 7px;
+    padding: 15px;
+    background-color: rgb(253, 113, 138);
+    color:#f2f5f8;
+    border-radius: 4px;
+}
+/* form{
+    border-radius: 2px;
+    padding: 30px 30px 30px 30px;
+    margin: 10px;
+} */
+form h1{
+    color: #081931;
+}
+input:focus, textarea:focus {
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #ffd43b;
+}
+input {
+    padding: 7px 10px;
+    border-radius: 1px;
+    border: none;
+    width: 150px;
+}
+select, textarea, input{
+     border-radius: 5px;
+    border: none;
+    padding: 7px;
+    margin: 3px;
+    background-color: #E4EBF1;
+}
+.textarea{
+    border-radius: 10px;
+}
+
+.button{
+     border: none;
+    color: #fff;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #ffd43b;
+}
+.button:hover{
+  background-color: #e4cc76;
+}
+
+.label{
+    font-size: 40px;
+    color: rgb(252, 238, 238);
+}
+
+.name-form{
+     padding: 7px;
+     margin: 10px;
+     border-radius: 5px;
+}
+ 
+ .course-form{
+     /* padding: 20px;
+     margin: 10px; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ .gender{
+     border: none;
+     padding: 10px;
+     margin: 10px;
+     background-color: #E4EBF1;
+     border-radius: 5px;
+     width: 150px;
+ }
+ .phone1{
+     width:70px;
+ }
+ .phone{
+    padding: 7px;
+    margin: 10px 10px 10px 0px;
+    border-radius: 5px;
+    background-color: #E4EBF1;
+ }
+ #id{
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+ }
+  .cancel-btn{
+    background-color: #57606d;
+ }
+ .cancel-btn:hover{
+    background-color: #80868f;
+ }
+
+ .banner-container-hidden{
+     display: none;
+ }
+
+@media(max-width: 768px){
+    body{
+        color: #f2f5f8;
+    }
+    .register-form input,  .register-form select{
+        
+        width: 80vw;
+    }
+
+    .registerFormTitle{
+        color: #f2f5f8;
+    }
+    .name-form, .email-phone{
+        display: flex;
+      
+        flex-direction: column;  /* -------------------------- */
+        align-items: center;
+        justify-content: center;
+    }
+    .name-form{
+
+     margin: 0;
+ 
+    }
+ 
+    .name-form input{
+        margin: 10px;
+    }
+    .address textarea{
+        width: 80vw;
+    }
+    .banner-container{
+        display: none;
+    }
+
+    .banner-container-hidden{
+        /* display: block; */
+        color: #f2f5f8;
+    }
+    
+    .logo{
+        position: absolute;
+        left: -60%;
+    }
+
+    .reg-container{
+        color: #f2f5f8;
+        display: flex;
+        min-width: 100%;
+        min-height: 100%;
+        background-image: url('../image/homepage-images/login-banner.jpg');
+        background-size: cover;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

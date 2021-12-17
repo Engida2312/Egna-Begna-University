@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="./css/Login.css">
+    <link rel="stylesheet" href="/css/Register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+
+        <div class="reg-container">
+            <div class="register-form">
+                <% regErrors.forEach(function(message){ %>
+                    <div class="error-display"><%= message%></div>
+               <% }) %>
+               <div class="banner-container-hidden">
+                   <div><a class="logo" href="/"><i class="fa fa-university"></i></a></div>
+                
+                <h1 class="university-title">Egna Begna University</h1>
+                </div>
+                <form action="/register" method="POST">
+                    <h1 class="registerFormTitle">Registration Form</h1>
+                    <div class="name-form">
+                        <input name="firstName"  class="username" placeholder="First name" size="30">
+                        <input name="middleName" class="username" placeholder="Middle name" size="30">
+                        <input name="lastName" class="username" placeholder="Last Name" size="30">
+                    </div>
+                    <!-- Course selection part -->
+                    <div class="course-form">
+                        <!-- <label for="Course">Course</label> -->
+                        <div>
+                            <select class="name-form" name="courses">
+                                <option value="">Choose course</option>
+                                <option value="Computer">Computer</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Big Data">Big Data</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Email Address -->
+                    <div>
+                       
+                        <!-- <label>Gender:</label> -->
+                        <select class="gender" name="gender">
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Phone information -->
+                    <div class="email-phone">
+                        <input name="email" id="email" name="email" placeholder="Email">
+                            <!-- <input  type="number" class="phone1" name="CountryCode" value="number" size="5" placeholder="code"> -->
+                            <input type="number" class="phone" name="phoneNumber" size="20" placeholder="Phone number">
+                        
+                    </div>
+                    
+                    <!-- Address of Applicant -->
+                    <div class="address">
+                        <textarea placeholder="Address" name="address" id="Region" cols="70" rows="2"></textarea>
+                        </label>
+                    </div>
+                    
+                    <!-- Password -->
+                    <!-- <div class="name-form">
+                        <label>Password:
+                            <input name="password" type="password" id="pass" name="pass" placeholder="Password">
+                            <input name="confirmPassword" type="password" id="pass" name="repass" placeholder="Confirm">
+                        </label>
+                    </div> -->
+                    <div>
+                        <button type="submit" class="button">Submit</button>
+                        <button type="reset" class="button cancel-btn">cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <div class="banner-container">
+            <a class="logo" href="/"><i class="fa fa-university"></i></a>
+            <h1 class="university-title">Egna Begna University</h1>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

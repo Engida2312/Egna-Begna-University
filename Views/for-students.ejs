@@ -1,0 +1,32 @@
+
+ <%- include('includes/admin-header') %>
+
+
+ <!-- *********************admin body start**************** -->
+ <div class="admin-body">
+     <div class="student-form">
+         <div class="basic-information">
+             <h3>Notice</h3>
+             <form action="/notice" method="POST" class="basic-info-form">
+                <div>
+                    <!-- <label for="post-body" class="text-muted mb-1"><small>Title</small> -->
+                    <input type="text" id ="tit" name="title" placeholder="Title">
+                 <div class="col-75">
+                    <textarea id="body" name="body" placeholder="Notice-Board;"></textarea>
+                  </div>
+
+                 <div class="form-btn">
+                     <button type="submit" class="btn submit-btn">Submit</button>
+                     <button type="submit" class="btn cancel-btn">cancel</button>
+                 </div>
+             </form>
+         </div>
+     </div>
+ </div>
+ <!-- *********************admin body end**************** -->
+ 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="./js/admin.js"></script>
+
+
+

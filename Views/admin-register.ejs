@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/css/Register.css">
+</head>
+
+<body>
+    <div class="register-form">
+        <% regErrors.forEach(function(message){ %>
+            <div class="error-display"><%= message%></div>
+       <% }) %>
+        <form action="/admin/register" method="POST">
+            <h1>Admin Registration Form</h1>
+            <div class="name-form">
+                <input name="fullname"  class="username" placeholder="Full name" size="30">
+                <input name="username" class="username" placeholder="username" size="30">
+                <!-- <input name="lastName" class="username" placeholder="Sir Name" size="30"> -->
+            </div>
+            
+            <!-- Email Address -->
+            <div>
+                <label>Email:</label>
+                <input name="email" id="email" name="email" placeholder="email-id">
+                <label>Gender:</label>
+                <select class="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <!-- Phone information -->
+            <div>
+                <!-- <label>username:</label>
+                <input name="username" id="email" name="email" placeholder="username"> -->
+                <label>Phone number:
+                    <!-- <input  type="number" class="phone1" name="CountryCode" value="number" size="5" placeholder="code"> -->
+                    <input type="number" class="phone" name="phoneNumber" size="20" placeholder="number">
+                </label>
+            </div>
+            
+            <!-- Password -->
+            <div class="name-form">
+                <label>Password:
+                    <input name="password" type="password" id="pass" name="pass" placeholder="Password">
+                    <input name="confirmPassword" type="password" id="pass" name="repass" placeholder="Confirm">
+                </label>
+            </div>
+            <div>
+                <button class="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

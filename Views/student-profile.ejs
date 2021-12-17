@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/image/university-solid.svg">
+    <title>Egna Begna University</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Playfair+Display:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer Style.css">
+    <link rel="stylesheet" href="./css/header-intro.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/student-page.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-toolbar profile-toolbar">
+            <a class="logo" href=""><i class="fa fa-university"></i></a>
+            <a class=" student-icon" href=""><i class="fa fa-search"></i></a>
+            <a class="btn student-icon" href=""><i class="fa fa-bell"></i></a>
+            <a class="btn" href="/student-profile"><img class="student-profile" src="./image/engida.jpg" alt=""></i></a>
+
+
+            <div class="student-profile-dropdown item">
+                <a class="profile-drop-btn" style="color: #fff;" href="" "><i class=" fa fa-chevron-down"></i></a>
+                <div class="student-profile-content dropdown" id="profile-dropdown">
+                    <li><a id="drop" class="dropdown-item" href="">Profile</a></li>
+                    <li><a id="drop" class="dropdown-item" href="">Profile</a></li>
+                    <li><a id="drop" class="dropdown-item" href="">Profile</a></li>
+                    <li><a id="drop" class="dropdown-item" href="">Profile</a></li>
+                    <li><a id="drop" class="dropdown-item" href="">Profile</a></li>
+                    <!-- <a class="dropdown-item" href="">Mentor</a>
+                    <a class="dropdown-item" href="">Messages</a>
+                    <a class="dropdown-item" href="">Settings</a>
+                    <a class="dropdown-item" href="">Log out</a> -->
+                </div>
+            </div>
+            <form action="/logout" method="POST">
+                <button class="btn login">Logout</button>
+            </form>
+            
+        </div>
+        <div id="navbar" class="header-navbar student-navbar">
+            <p class="menu-bar" href=""><i class="fa fa-bars" aria-hidden="true"></i></p>
+            <a class="home-icon student-home" href=""><i class="fa fa-home"></i></a>
+            <a class="student-nav-links" href="">Academic</a>
+            <a class="student-nav-links" href="">Exam</a>
+            <a class="student-nav-links" href="">Learning Material</a>
+            <a class="student-nav-links" href="">Library</a>
+            <a class="student-nav-links" href="">Fees</a>
+            <a class="student-nav-links" href="">Notices</a>
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="body-header">
+            <h1>Egna Begna University</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quia nulla blanditiis ut tempora,
+                saepe quo accusantium alias officia, ipsam tenetur, dignissimos obcaecati nihil mollitia ad nostrum
+                fuga. Voluptates tempora odio vel? Laboriosam, reprehenderit quibusdam.</p>
+        </div>
+
+
+
+
+<!--***************** Student profile body*************************-->
+<div class="container">
+  <!-- profile -->
+  <div class="profileCard">
+    
+    <div class="imageContainer">
+      <img src="./image/angela.jpg" style="width: 200px">
+    </div>
+    <h1 class="student-name"  style="margin-left:100px;margin-top: 20px;"><%= studentData.firstName%> <%= studentData.lastName%></h1>
+    <div class="main-container">
+      <p><i class="material-icons">home</i>  <%= studentData.departement%></p>
+      <p><i class="material-icons">class</i>  CE Sem 3</p>
+      <p><i class="material-icons">email</i>  <%= studentData.email%></p>
+      <p><i class="material-icons">phone</i>  <%= studentData.phoneNumber%></p>
+      <p><i class="material-icons">room</i></i>  address:rajkot morbi highway, 360003</p>
+      <hr>
+    
+      <p><i class="material-icons">star</i>
+        <b>General Report</b></p>
+      <p>Digital Electronics</p>
+      <div class="skill-bar">
+        <div class="progress-bar" style="width:80%">80%</div>
+      </div>
+      <p>MAVC</p>
+      <div class="skill-bar">
+        <div class="progress-bar" style="width:60%">60%</div>
+      </div>
+      <p>Programming</p>
+      <div class="skill-bar">
+        <div class="progress-bar" style="width:90%">90%</div>
+      </div>
+      <p>English</p>
+      <div class="skill-bar">
+        <div class="progress-bar" style="width:70%">70%</div>
+      </div>
+      <p>Physics</p>
+      <div class="skill-bar">
+        <div class="progress-bar" style="width:35%">35%</div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="right-profile">
+          <!-- chart -->
+    <div id="curve_chart" style="width: 650px; height: 400px;float: right;margin-left: 10px;">chart
+    </div>
+      <!--paragraph about the student-->
+    <div class="textContainer">
+      <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+      </p>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-main student-footer">
+      <div class="footer-item">
+          <div class="footer-logo">
+              <a class="logo" href=""><i class="fa fa-university"></i></a>
+          </div>
+
+          <ul class="social-link">
+              <li><a href="https://www.gmail.com"><i class="fa fa-envelope"></i></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-telegram"></i></a></li>
+              <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+      </div>
+
+  </div>
+  <div class="copyright">
+      <p>©copyright 2021 EBU</p>
+  </div>
+</footer>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', { 'packages': ['corechart'] });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Scores'],
+      ['2014', 400],
+      ['2015', 350],
+      ['2016', 380],
+      ['2017', 430]
+    ]);
+
+    var options = {
+      title: 'Progress Report',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./js/admin.js"></script>
+</body>
+</html>
